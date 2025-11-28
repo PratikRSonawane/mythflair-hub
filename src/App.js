@@ -34,7 +34,7 @@ function App() {
 
           {/* BLOG LINK — WORKS RIGHT NOW */}
           <a
-            href="https://mythflair-blog.vercel.app" // <-- Replace later with blog.mythflair.com after DNS setup
+            href="https://blog.mythflair.com" // <-- Replace later with blog.mythflair.com after DNS setup
             style={styles.tile}
             target="_blank"
             rel="noopener noreferrer"
