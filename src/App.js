@@ -96,14 +96,14 @@ function App() {
           /* --- NAVBAR --- */
           .navbar {
             position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            padding: 0.75rem 2rem; /* Reduced padding from 1.5rem */
+            padding: 0.75rem 2rem;
             transition: all 0.3s ease;
             display: flex; justify-content: center;
           }
           .navbar.scrolled {
             background: var(--glass);
             backdrop-filter: blur(12px);
-            padding: 0.5rem 2rem; /* Reduced scrolled padding */
+            padding: 0.5rem 2rem;
             border-bottom: 1px solid var(--glass-border);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
           }
@@ -288,14 +288,13 @@ function App() {
             .desktop-only { display: none; }
             .mobile-only { display: flex; }
             
-            .navbar { padding: 0.8rem 1.5rem; } /* Reduced mobile navbar padding */
+            .navbar { padding: 0.8rem 1.5rem; }
             .hero-title { font-size: 3.5rem; }
             .hero-section { height: 80vh; }
             
             .feature-container { flex-direction: column; gap: 2rem; }
             .image-banner { height: 250px; border-radius: 20px; margin-top: 3rem; }
             
-            /* Two Column Grid for Mobile */
             .grid { 
               grid-template-columns: 1fr 1fr; 
               gap: 1rem; 
@@ -343,7 +342,6 @@ function App() {
                <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle Theme">
                   {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                </button>
-               {/* Toggle Button handles both open and close states */}
                <button onClick={() => setIsMenuOpen(!isMenuOpen)} style={{ background: 'none', border: 'none', color: 'var(--text-main)', cursor: 'pointer' }}>
                  {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                </button>
@@ -369,7 +367,9 @@ function App() {
           <div className="hero-overlay"></div>
           
           <div className="hero-content">
-            <h1 className="hero-title">MythFlair</h1>
+            <h1 className="hero-title">
+              MythFlair – Web Novels, Lore Wiki & Story Universe
+            </h1>
             <p className="hero-subtitle">
               One home for all your worlds.<br/>
               <span style={{ color: 'var(--primary)' }}>Web novels. Deep Lore. Endless Adventure.</span>
@@ -378,10 +378,10 @@ function App() {
         </header>
 
         {/* --- MAIN CONTENT --- */}
-        <div className="content-wrapper">
+        <main className="content-wrapper">
           
           {/* Grid Cards */}
-          <div className="grid">
+          <div className="grid" id="updates">
             {/* Card 1 */}
             <div className="glass-card">
               <div className="card-icon-wrapper">
@@ -395,7 +395,7 @@ function App() {
             </div>
 
             {/* Card 2 */}
-            <div className="glass-card">
+            <div className="glass-card" id="wiki">
               <div className="card-icon-wrapper">
                 <Scroll size={22} />
               </div>
@@ -422,7 +422,7 @@ function App() {
           </div>
 
           {/* --- ABOUT US SECTION --- */}
-          <div id="about" className="about-section">
+          <section id="about" className="about-section">
              <div style={{ padding: '1rem', background: 'var(--glass-border)', borderRadius: '50%', marginBottom: '1.5rem' }}>
                 <Users size={32} color="var(--primary)" />
              </div>
@@ -435,19 +435,19 @@ function App() {
              <button className="nav-btn" style={{ background: 'transparent', border: '1px solid var(--primary)', color: 'var(--primary)' }}>
                Read Our Manifesto
              </button>
-          </div>
+          </section>
 
           {/* --- BANNER IMAGE SECTION --- */}
-          <div className="image-banner">
+          <section className="image-banner">
              <img src={bannerImage} alt="Mythflair Landscape" />
              <div className="banner-overlay">
                 <h3 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '0.5rem' }}>A Universe Awaits</h3>
                 <p style={{ opacity: 0.9, fontSize: '1.1rem' }}>Discover the crystals of eternity.</p>
              </div>
-          </div>
+          </section>
 
           {/* --- STAY TUNED (Replaced Newsletter) --- */}
-          <div className="info-box">
+          <section className="info-box" id="join">
              <div style={{ position: 'absolute', top: '-20px', left: '-20px' }}><Sparkles size={100} opacity={0.2} /></div>
              <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Stay Tuned</h2>
              <p style={{ marginBottom: '2rem', opacity: 0.9, fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
@@ -457,9 +457,9 @@ function App() {
              <a href="https://blog.mythflair.com" target="_blank" rel="noopener noreferrer" className="nav-btn" style={{ background: 'white', color: 'var(--primary-dark)', padding: '1rem 2.5rem', display: 'inline-block' }}>
                Visit Dev Blog
              </a>
-          </div>
+          </section>
 
-        </div>
+        </main>
 
         {/* --- FEATURE / TRAILER SECTION --- */}
         <section className="feature-section">
