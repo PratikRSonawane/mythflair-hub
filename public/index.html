@@ -3,23 +3,73 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Language meta (for some tools) -->
     <meta http-equiv="content-language" content="en" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
 
-    <title>MythFlair | Web Novels, Lore Wiki & Story Universe</title>
-
+    <!-- Primary SEO -->
+    <title>MythFlair – Web Novels, Lore Wiki & Story Universe</title>
     <meta
       name="description"
-      content="MythFlair is an interconnected story universe featuring web novels, a lore wiki, dev blog updates, and immersive characters."
+      content="Dive into the MythFlair universe: web novels, lore wiki, connected characters, and developer story updates."
+    />
+    <meta
+      name="keywords"
+      content="web novels, story universe, lore wiki, fantasy world, online stories, mythflair"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://ai.mythflair.com/" />
+
+    <!-- Open Graph (social / Google / Bing) -->
+    <meta property="og:title" content="MythFlair – Web Novels & Lore Wiki" />
+    <meta
+      property="og:description"
+      content="Explore a massive interconnected story world with web novels, characters and lore."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ai.mythflair.com/" />
+    <meta
+      property="og:image"
+      content="https://ai.mythflair.com/thumbnail.png"
+    />
+    <meta property="og:site_name" content="MythFlair" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@MythFlairAI" />
+    <meta
+      name="twitter:title"
+      content="MythFlair – Web Novels & Lore Wiki"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover a living story universe of characters, places, and legends."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ai.mythflair.com/thumbnail.png"
     />
 
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Favicon + PWA -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "MythFlair",
+        "url": "https://ai.mythflair.com/",
+        "description": "MythFlair is an interconnected story universe with web novels, lore wiki, and character-driven narratives.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ai.mythflair.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
